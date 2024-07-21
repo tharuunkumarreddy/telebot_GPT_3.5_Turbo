@@ -22,6 +22,12 @@ async def command_start_handler(message: types.Message):
     """
     await message.reply("Hi\nI am Echo Bot!\nPowered by aiogram.")
 
+@dp.message_handler()
+async def echo(message: types.Message):
+    """
+    This will return echo
+    """
+    await message.answer(message.text)
 
 
 if __name__ == "__main__":
